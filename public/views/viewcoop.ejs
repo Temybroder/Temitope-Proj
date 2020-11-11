@@ -1,0 +1,129 @@
+
+<% include ./partials/headeradmin %>
+<body class="fixed-sn white-skin">
+  <!-- Main layout -->
+  <main>
+    <div class="container-fluid">
+
+      <!-- Section: Customers -->
+      <section class="section team-section">
+
+        <!-- First row -->
+        <div class="row">
+
+          <!-- First column -->
+          <div class="col-md-8">
+
+            <div class="row mb-1">
+              <div class="col-md-9">
+                <h4 class="h4-responsive mt-1">Project Summary</h4>
+              </div>
+              <div class="col-md-3">
+                <div class="md-form">
+                 <a href="#usercard">Submitted By: <i class="w-fa fas fa-angle-double-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 mb-1">
+                <!-- Tabs -->
+                <div class="classic-tabs">
+                  <!-- Nav tabs -->
+                  <div class="tabs-wrapper">
+                    <ul class="nav tabs-primary primary-color" role="tablist">
+                      
+                      <li class="nav-item">
+                        <a class="nav-link waves-light active" data-toggle="tab" href="#panel84" role="tab">ALL PROJECT INFO</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Tab panels -->
+                  <div class="tab-content card">
+
+
+
+                    <!-- Panel 2 -->
+                    <div class="tab-pane fade show active" id="panel84" role="tabpanel">
+                      <div class="animated bounceInUp table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                            
+                              <th>Data</th>
+                              <th>Detail</th>
+                            
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                             
+                              <td><strong>Project Type</strong></td>
+                              <td>Registration of Cooperative</td>
+                             
+                            </tr>
+                           
+                           
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- /.Panel 2 -->
+                  </div>
+                  <!-- /.Tabs -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- First column -->
+
+          <!-- Second column -->
+          <div class="animated rollIn col-md-4 mb-md-0 mb-5">
+
+            <!-- Card -->
+            <div class="card profile-card" id="usercard">
+
+              <!-- Avatar -->
+              <div class="avatar z-depth-1-half mb-4">
+                <img alt="Image placeholder" src="/images/iconlaw.png" class="rounded-circle" alt="User Image">
+              </div>
+
+              <div class="card-body pt-0 mt-0">
+                <!-- Name -->
+                <div class="text-center">
+                  <h3 class="mb-3 font-weight-bold"><strong><%= user.name %></strong></h3>
+                  <h6 class="font-weight-bold blue-text mb-4"> SealedApp <%= user.role %></h6>
+                </div>
+
+                <ul class="striped list-unstyled">
+                  <li><strong>E-mail address:</strong><%= user.email %></li>
+
+                  <li><strong>Date Joined:</strong><%= user.date %></li>
+
+                  <li><strong>Role:</strong> <%= user.role %></li>
+
+                  <li><strong>Twitter username:</strong> @anna.doe</li>
+
+                  <li><strong>Instagram username:</strong> @anna.doe</li>
+                </ul>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Second column -->
+
+        </div>
+        <!-- First row -->
+
+      </section>
+      <!-- Section: Customers -->
+
+    </div>
+  </main>
+  <!-- Main layout -->
+
+  <% include ./partials/footeradmin %>

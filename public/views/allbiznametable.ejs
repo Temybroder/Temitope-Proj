@@ -1,0 +1,48 @@
+<% include ./partials/headeradmin %>
+<!-- Main Navigation  -->
+
+<!-- Main layout -->
+<main>
+ <div class="container-fluid">
+
+  <script>
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            autoWidth: false,
+            columnDefs: [
+                {
+                    targets: ['_all'],
+                    className: 'mdc-data-table__cell'
+                }
+            ]
+        } );
+    } );
+    </script>
+   <h3>VIEW ALL USERS</h3>
+    <table id="example" class="mdl-data-table" style="width:100%">
+      <thead>
+          <tr>
+            <th>Submitted By</th>
+            <th>Company Name</th>
+            <th>Date</th>
+            <th>View Details</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% for(var i=0; i < users.length; i++) { %>
+          <tr>
+              <td>   <a href ="/viewuser" ><%=  users[i].name %>  </a> </td> 
+              <td><%= users[i].password %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].role %></td>
+            <td><a class="btn btn-primary"><i class="fas fa-leaf"></i></a></td>
+          </tr>              
+          <% } %>
+        </tbody>
+      </table>
+
+
+</div>
+</main>
+<% include ./partials/footeradmin %>

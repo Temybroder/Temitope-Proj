@@ -1,0 +1,48 @@
+
+
+<% include ./partials/headeradmin %>
+<!-- Main Navigation  -->
+
+<!-- Main layout -->
+<main>
+ <div class="container-fluid">
+
+  <script>
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            autoWidth: false,
+            columnDefs: [
+                {
+                    targets: ['_all'],
+                    className: 'mdc-data-table__cell'
+                }
+            ]
+        } );
+    } );
+    </script>
+   <h3>VIEW ALL USERS</h3>
+    <table id="example" class="mdl-data-table" style="width:100%">
+      <thead>
+          <tr>
+            <th>Cooperative Name</th>
+            <th>Date Submitted</th>
+            <th>Lawyer Assigned</th>
+           
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% for(var i=0; i < coopforms.length; i++) { %>
+          <tr>
+              <td>   <a href ="/viewcoop" ><%=  coopforms[i].coopname %>  </a> </td> 
+              <td><%= coopforms[i].date %></td>
+              <td><%= coopforms[i].assignedLawyer %></td>
+            
+            <td><a class="btn aqua-gradient btn-rounded"><i class="fas fa-trash"></i></a></td>
+          </tr>              
+          <% } %>
+        </tbody>
+      </table>
+</div>
+</main>
+<% include ./partials/footeradmin %>

@@ -1,0 +1,58 @@
+
+      <div class="row mt-4">
+        <div class="col-md-4 m-auto">
+          <div class="card card-body">
+  
+    <div class="card text-white bg-success md-6">
+      <div class="card-header" style="text-align:center;"><h6>Enter details of Company</h6></div>
+    
+    </div>
+  
+  
+  <br/>
+  <form action="/subs/submitplf" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="inputname"> Enter Name of Company</label>
+      <input type="name" name= "name" class="form-control" id="name" placeholder="Input Name for the Company"  value="<%= typeof name != 'undefined' ? name : '' %>">
+    </div>
+
+
+    <span class="badge badge-pill badge-secondary">Directors' Data </span>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputname">Name</label>
+          <input type="name" name= "dirname" class="form-control" id="dirname" placeholder="Input your full name"  value="<%= typeof dirname != 'undefined' ? dirname : '' %>">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Home Address</label>
+        <input type="address" name="address" class="form-control" id="address" placeholder="1234 Lagos St" value="<%= typeof address != 'undefined' ? address : '' %>">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group md-6">
+
+        <label class="mr-2">Upload National I.D Card:</label>
+        <input type="file" class="form-control id="image" name="image" value="">
+      </div>
+  </div>
+
+  <a href="#"><i class="fa fa-plus-circle" aria-hidden="true"> Add New Director</i></a>
+
+  
+                                  <div class="form-row">
+                                      <div class="form-group mt-3">
+                                    
+                                        <button type="submit" class="btn btn-primary">Submit for Processing</button>
+                                      </div>
+                                  </div>
+                                    </form>
+  
+    
+     </div>
+    </div>
+   </div>
