@@ -12,7 +12,7 @@ router.get('/localhost:5000/users/about', ensureAuthenticated, (req, res) => res
 router.get('/dashboard', ensureAuthenticated, (req, res) =>{
 if (req.user.role === 'lawyer')
 
-  res.render('lawyersdashboard', {
+  res.render('dashboard', {
     user: req.user
   }); else if (req.user.role === 'user')
   {
