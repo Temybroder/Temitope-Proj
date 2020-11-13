@@ -16,7 +16,7 @@ module.exports = {
     else {
      if ( req.user.role === 'lawyer')  
     {
-    res.render('lawyersdashboard', { 
+    res.render('dashboard', { 
       user: req.user
     })}
 
